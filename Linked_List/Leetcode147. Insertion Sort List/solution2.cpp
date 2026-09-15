@@ -1,0 +1,18 @@
+class Solution {
+public:
+    ListNode* insertionSortList(ListNode* head) {
+        ListNode*dummy=new ListNode(0);
+        ListNode*current=head;
+        while(current!=NULL){
+            ListNode*next=current->next;
+            ListNode*prev=dummy;
+            while(prev->next!=NULL&&prev->next->val<current->val){
+                prev=prev->next;
+            }
+            current->next=prev->next;
+            prev->next=current;
+            current=next;
+        }
+        return dummy->next;
+    }
+};
