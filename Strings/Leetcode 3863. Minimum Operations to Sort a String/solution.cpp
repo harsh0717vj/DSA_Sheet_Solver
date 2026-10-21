@@ -8,9 +8,7 @@ public:
             if(s[0]<s[1]) return 0;
             else return -1;
         }
-        int minIdx=INT_MAX;
         char minChar='z';
-        int maxIdx=INT_MIN;
         char maxChar='a';
         for(int i=0;i<n;i++){
             if(s[i]<minChar){
