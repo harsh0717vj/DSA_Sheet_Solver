@@ -13,11 +13,9 @@ public:
         for(int i=0;i<n;i++){
             if(s[i]<minChar){
                 minChar=s[i];
-                minIdx=i;
             }
             if(s[i]>maxChar){
                 maxChar=s[i];
-                maxIdx=i;
             }
         }
         if (s[0] == minChar || s[n - 1] == maxChar) return 1;
